@@ -5,33 +5,41 @@
   <title>Docker Assignment</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      background: #eef2f3;
       margin: 0;
-      padding: 0;
     }
 
 ```
 .header {
   background: #0f7c82;
   color: white;
-  padding: 20px;
   text-align: center;
-  font-size: 28px;
+  padding: 25px;
+  font-size: 26px;
   font-weight: bold;
 }
 
-.container {
+.subheader {
+  text-align: center;
+  color: white;
+  margin-top: -15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+.card {
   width: 80%;
   margin: 30px auto;
   background: white;
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 h2 {
   color: #0f7c82;
+  margin-top: 20px;
 }
 
 ul {
@@ -39,11 +47,11 @@ ul {
 }
 
 .box {
-  background: #f1f1f1;
+  background: #f4f4f4;
   padding: 15px;
   border-radius: 8px;
-  margin-top: 10px;
   font-family: monospace;
+  margin-top: 10px;
 }
 
 .btn {
@@ -58,8 +66,8 @@ ul {
 
 .footer {
   text-align: center;
-  margin-top: 20px;
   color: gray;
+  margin: 20px;
 }
 ```
 
@@ -71,8 +79,11 @@ ul {
   <div class="header">
     Docker Containerization Assignment
   </div>
+  <div class="subheader">
+    Containerized Web Application using Docker & PostgreSQL
+  </div>
 
-  <div class="container">
+  <div class="card">
 
 ```
 <p><b>Name:</b> Raghuveer Singh</p>
@@ -84,7 +95,11 @@ ul {
   <li>Database: PostgreSQL</li>
   <li>Containerization: Docker</li>
   <li>Orchestration: Docker Compose</li>
+  <li>Networking: Bridge</li>
 </ul>
+
+<h2>🔗 GitHub Repository</h2>
+<a class="btn" href="#" target="_blank">View Assignment Files</a>
 
 <h2>📥 Input</h2>
 <div class="box">
@@ -93,13 +108,22 @@ ul {
 </div>
 
 <h2>📤 Output</h2>
+<p><b>API Response:</b></p>
 <div class="box">
   [{"id":1,"name":"Raghuveer Singh"}]
 </div>
 
-<h2>💡 Conclusion</h2>
+<p><b>Health Check:</b></p>
+<div class="box">
+  OK
+</div>
+
+<h2>📸 Screenshots</h2>
+<p>All output screenshots are included in the repository.</p>
+
+<h2>📊 Conclusion</h2>
 <p>
-  This project successfully demonstrates containerization of a Node.js application with PostgreSQL using Docker.
+  This project demonstrates containerization of a Node.js application with PostgreSQL using Docker and Docker Compose.
 </p>
 ```
 
