@@ -1,26 +1,113 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>Docker Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+```
+.header {
+  background: #0f7c82;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container {
+  width: 80%;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #0f7c82;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+.box {
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.btn {
+  display: inline-block;
+  background: #0f7c82;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+}
+```
+
+  </style>
 </head>
+
 <body>
-  <h1>Docker Containerization Assignment</h1>
 
-  <p><b>Name:</b> Raghuveer Singh</p>
-  <p><b>Branch:</b> B.Tech CSE</p>
+  <div class="header">
+    Docker Containerization Assignment
+  </div>
 
-  <h2>Project Components</h2>
-  <ul>
-    <li>Backend: Node.js + Express</li>
-    <li>Database: PostgreSQL</li>
-    <li>Docker + Docker Compose</li>
-  </ul>
+  <div class="container">
 
-  <h2>API Output</h2>
-  <p>POST /add → Data inserted</p>
-  <p>GET /users → Raghuveer Singh</p>
+```
+<p><b>Name:</b> Raghuveer Singh</p>
+<p><b>Branch:</b> B.Tech CSE</p>
 
-  <h2>Conclusion</h2>
-  <p>Project successfully containerized and tested using Docker.</p>
+<h2>📌 Project Components</h2>
+<ul>
+  <li>Backend: Node.js + Express</li>
+  <li>Database: PostgreSQL</li>
+  <li>Containerization: Docker</li>
+  <li>Orchestration: Docker Compose</li>
+</ul>
+
+<h2>📥 Input</h2>
+<div class="box">
+  POST /add <br><br>
+  { "name": "Raghuveer Singh" }
+</div>
+
+<h2>📤 Output</h2>
+<div class="box">
+  [{"id":1,"name":"Raghuveer Singh"}]
+</div>
+
+<h2>💡 Conclusion</h2>
+<p>
+  This project successfully demonstrates containerization of a Node.js application with PostgreSQL using Docker.
+</p>
+```
+
+  </div>
+
+  <div class="footer">
+    © 2026 Raghuveer Singh
+  </div>
+
 </body>
 </html>
