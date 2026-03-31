@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Assignment</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #eef2f3, #dfe9f3);
+      margin: 0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0f7c82, #0a5c61);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .subheader {
+      text-align: center;
+      color: white;
+      margin-top: -15px;
+      padding-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .card {
+      width: 80%;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 15px 35px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      color: #0f7c82;
+      margin-top: 25px;
+    }
+
+    ul, ol {
+      line-height: 1.8;
+    }
+
+    .box {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: monospace;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      background: #e8f7f8;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #0f7c82, #0a5c61);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #0a5c61, #083f42);
+    }
+
+    .footer {
+      text-align: center;
+      color: gray;
+      margin: 20px;
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="header">
+    Docker Containerization Assignment
+  </div>
+
+  <div class="subheader">
+    Containerized Web Application using Docker & PostgreSQL
+  </div>
+
+  <div class="card">
+
+    <p><b>Name:</b> Raghuveer Singh</p>
+    <p><b>Branch:</b> B.Tech CSE</p>
+
+    <h2>📌 Project Overview</h2>
+    <p>
+      This project demonstrates how a Node.js backend application can be containerized 
+      using Docker and connected with a PostgreSQL database. The system is designed 
+      using microservice architecture where each component runs in its own container.
+    </p>
+
+    <h2>🎯 Objective</h2>
+    <ul>
+      <li>Understand Docker containerization</li>
+      <li>Run multiple services using Docker Compose</li>
+      <li>Implement communication between containers</li>
+      <li>Test APIs using curl commands</li>
+    </ul>
+
+    <h2>📌 Project Components</h2>
+    <ul>
+      <li><b>Backend:</b> Node.js + Express</li>
+      <li><b>Database:</b> PostgreSQL</li>
+      <li><b>Containerization:</b> Docker</li>
+      <li><b>Orchestration:</b> Docker Compose</li>
+      <li><b>Networking:</b> Bridge Network</li>
+    </ul>
+
+    <h2>🏗️ Architecture</h2>
+    <p>The project consists of two main containers:</p>
+    <ul>
+      <li><b>Backend Container:</b> Handles API requests</li>
+      <li><b>Database Container:</b> Stores user data</li>
+    </ul>
+    <p>
+      Both containers communicate through a Docker bridge network.
+      The backend connects to the database using the service name <b>"db"</b>.
+    </p>
+
+    <h2>🔄 Working Flow</h2>
+    <ol>
+      <li>User sends request using curl or browser</li>
+      <li>Request reaches Node.js backend container</li>
+      <li>Backend processes request</li>
+      <li>Query sent to PostgreSQL database container</li>
+      <li>Database stores/retrieves data</li>
+      <li>Response returned to user</li>
+    </ol>
+
+    <h2>🔗 GitHub Repository</h2>
+    <a class="btn" href="https://github.com/raghuveer3339/docker-assignment" target="_blank">
+      View Assignment Files
+    </a>
+    <br>
+    <a class="btn" href="https://raghuveer3339.github.io/docker-assignment/" target="_blank">
+      Live Project
+    </a>
+
+    <h2>📥 API Endpoints</h2>
+
+    <p><b>1. Add User</b></p>
+    <div class="box">
+      POST /add <br><br>
+      { "name": "Raghuveer Singh" }
+    </div>
+
+    <p><b>2. Get Users</b></p>
+    <div class="box">
+      GET /users
+    </div>
+
+    <p><b>3. Health Check</b></p>
+    <div class="box">
+      GET /health
+    </div>
+
+    <h2>📤 Output</h2>
+
+    <p><b>API Response:</b></p>
+    <div class="box">
+      [{"id":1,"name":"Raghuveer Singh"}]
+    </div>
+
+    <p><b>Health Check:</b></p>
+    <div class="box">
+      OK
+    </div>
+
+    <h2>⚙️ Docker Commands Used</h2>
+    <div class="box">
+      docker-compose up --build <br>
+      docker ps <br>
+      docker-compose down
+    </div>
+
+    <h2>📦 Key Docker Concepts</h2>
+    <ul>
+      <li><b>Container:</b> Lightweight isolated environment</li>
+      <li><b>Image:</b> Blueprint of a container</li>
+      <li><b>Volume:</b> Persistent data storage</li>
+      <li><b>Network:</b> Enables communication between containers</li>
+    </ul>
+
+    <h2>📸 Screenshots</h2>
+    <p>All output screenshots are included in the repository.</p>
+
+    <h2>📊 Conclusion</h2>
+    <p>
+      This project demonstrates how Docker simplifies application deployment by 
+      containerizing backend and database services. It ensures portability, 
+      scalability, and easy setup across different environments.
+    </p>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Raghuveer Singh
+  </div>
+
+</body>
+</html>
